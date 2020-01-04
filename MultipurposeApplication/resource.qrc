@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/add.png</file>
+        <file>img/broom.png</file>
+        <file>img/color-picker.png</file>
+        <file>img/cut.png</file>
+        <file>img/file.png</file>
+        <file>img/file2.png</file>
+        <file>img/folder.png</file>
+        <file>img/font.png</file>
+        <file>img/paste (2).png</file>
+        <file>img/paste.png</file>
+        <file>img/redo.png</file>
+        <file>img/save.png</file>
+        <file>img/save2.png</file>
+        <file>img/undo.png</file>
+        <file>img/cancel.png</file>
+        <file>img/foldertext.png</file>
+        <file>img/conversation.png</file>
+    </qresource>
+</RCC>

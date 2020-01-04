@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "calculator.h"
+#include "encryptedtesteditor.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -24,5 +25,7 @@ void MainWindow::on_btnCalculator_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-
+    EncryptedTestEditor *encryptedTestEditor = new EncryptedTestEditor();
+    encryptedTestEditor->show();
+    this->hide();
 }

@@ -14,12 +14,18 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    calculator.cpp
+    calculator.cpp \
+    encryptedtesteditor.cpp
 
 
 HEADERS  += mainwindow.h \
-    calculator.h
+    calculator.h \
+    encryptedtesteditor.h
 
 FORMS    += mainwindow.ui \
-    calculator.ui
+    calculator.ui \
+    encryptedtesteditor.ui
+
+RESOURCES += \
+    resource.qrc
 
