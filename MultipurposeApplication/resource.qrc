@@ -17,5 +17,7 @@
         <file>img/cancel.png</file>
         <file>img/foldertext.png</file>
         <file>img/conversation.png</file>
+        <file>img/hacking_2ux_icon.ico</file>
+        <file>img/calculating_FUo_icon.ico</file>
     </qresource>
 </RCC>

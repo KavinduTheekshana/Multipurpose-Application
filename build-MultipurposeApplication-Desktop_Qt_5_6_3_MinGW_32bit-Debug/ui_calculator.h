@@ -51,6 +51,9 @@ public:
         if (Calculator->objectName().isEmpty())
             Calculator->setObjectName(QStringLiteral("Calculator"));
         Calculator->resize(398, 610);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/img/img/calculating_FUo_icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        Calculator->setWindowIcon(icon);
         centralWidget = new QWidget(Calculator);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -306,7 +309,7 @@ public:
 
     void retranslateUi(QMainWindow *Calculator)
     {
-        Calculator->setWindowTitle(QApplication::translate("Calculator", "MainWindow", Q_NULLPTR));
+        Calculator->setWindowTitle(QApplication::translate("Calculator", "Calculator", Q_NULLPTR));
         label->setText(QApplication::translate("Calculator", "0", Q_NULLPTR));
         pushButton_clear->setText(QApplication::translate("Calculator", "C", Q_NULLPTR));
         pushButton_plusMinus->setText(QApplication::translate("Calculator", "+/-", Q_NULLPTR));

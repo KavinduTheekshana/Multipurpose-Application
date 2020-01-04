@@ -20,12 +20,10 @@ void MainWindow::on_btnCalculator_clicked()
 {
  Calculator *calculator = new Calculator();
  calculator->show();
- this->hide();
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
     EncryptedTestEditor *encryptedTestEditor = new EncryptedTestEditor();
     encryptedTestEditor->show();
-    this->hide();
 }

@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>Calculator</class>
  <widget class="QMainWindow" name="Calculator">
   <property name="geometry">
@@ -13,10 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Calculator</string>
   </property>
-
-<widget class="QWidget" name="centralWidget">
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img/img/calculating_FUo_icon.ico</normaloff>:/img/img/calculating_FUo_icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -580,6 +581,8 @@ QPushButton:pressed {
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

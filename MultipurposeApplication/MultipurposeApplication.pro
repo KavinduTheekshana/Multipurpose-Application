@@ -15,12 +15,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     calculator.cpp \
-    encryptedtesteditor.cpp
+    encryptedtesteditor.cpp \
+    simplecrypt.cpp
 
 
 HEADERS  += mainwindow.h \
     calculator.h \
-    encryptedtesteditor.h
+    encryptedtesteditor.h \
+    simplecrypt.h
 
 FORMS    += mainwindow.ui \
     calculator.ui \

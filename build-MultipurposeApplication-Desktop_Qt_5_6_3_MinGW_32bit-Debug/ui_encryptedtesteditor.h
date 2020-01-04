@@ -38,10 +38,10 @@ public:
     QAction *actionCopy;
     QAction *actionPaste;
     QAction *actionCut;
-    QAction *actionOpenText;
+    QAction *actionOpenNormalText;
     QAction *actionOpenEncryptedText;
-    QAction *actionSave;
-    QAction *actionSaveAs;
+    QAction *actionSaveNormalText;
+    QAction *actionSaveEncrypedText;
     QAction *actionExit;
     QAction *actionEncryptText;
     QAction *actionDecryptText_2;
@@ -83,89 +83,94 @@ public:
         if (EncryptedTestEditor->objectName().isEmpty())
             EncryptedTestEditor->setObjectName(QStringLiteral("EncryptedTestEditor"));
         EncryptedTestEditor->resize(713, 431);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/img/img/hacking_2ux_icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        EncryptedTestEditor->setWindowIcon(icon);
         actionNew = new QAction(EncryptedTestEditor);
         actionNew->setObjectName(QStringLiteral("actionNew"));
-        QIcon icon;
-        icon.addFile(QStringLiteral(":/img/img/add.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionNew->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/img/img/add.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionNew->setIcon(icon1);
         actionClear = new QAction(EncryptedTestEditor);
         actionClear->setObjectName(QStringLiteral("actionClear"));
-        QIcon icon1;
-        icon1.addFile(QStringLiteral(":/img/img/broom.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionClear->setIcon(icon1);
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/img/img/broom.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionClear->setIcon(icon2);
         actionCopy = new QAction(EncryptedTestEditor);
         actionCopy->setObjectName(QStringLiteral("actionCopy"));
-        QIcon icon2;
-        icon2.addFile(QStringLiteral(":/img/img/paste (2).png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionCopy->setIcon(icon2);
+        QIcon icon3;
+        icon3.addFile(QStringLiteral(":/img/img/paste (2).png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionCopy->setIcon(icon3);
         actionPaste = new QAction(EncryptedTestEditor);
         actionPaste->setObjectName(QStringLiteral("actionPaste"));
-        QIcon icon3;
-        icon3.addFile(QStringLiteral(":/img/img/paste.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionPaste->setIcon(icon3);
+        QIcon icon4;
+        icon4.addFile(QStringLiteral(":/img/img/paste.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionPaste->setIcon(icon4);
         actionCut = new QAction(EncryptedTestEditor);
         actionCut->setObjectName(QStringLiteral("actionCut"));
-        QIcon icon4;
-        icon4.addFile(QStringLiteral(":/img/img/cut.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionCut->setIcon(icon4);
-        actionOpenText = new QAction(EncryptedTestEditor);
-        actionOpenText->setObjectName(QStringLiteral("actionOpenText"));
         QIcon icon5;
-        icon5.addFile(QStringLiteral(":/img/img/foldertext.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionOpenText->setIcon(icon5);
+        icon5.addFile(QStringLiteral(":/img/img/cut.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionCut->setIcon(icon5);
+        actionOpenNormalText = new QAction(EncryptedTestEditor);
+        actionOpenNormalText->setObjectName(QStringLiteral("actionOpenNormalText"));
+        QIcon icon6;
+        icon6.addFile(QStringLiteral(":/img/img/foldertext.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionOpenNormalText->setIcon(icon6);
         actionOpenEncryptedText = new QAction(EncryptedTestEditor);
         actionOpenEncryptedText->setObjectName(QStringLiteral("actionOpenEncryptedText"));
-        QIcon icon6;
-        icon6.addFile(QStringLiteral(":/img/img/folder.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionOpenEncryptedText->setIcon(icon6);
-        actionSave = new QAction(EncryptedTestEditor);
-        actionSave->setObjectName(QStringLiteral("actionSave"));
         QIcon icon7;
-        icon7.addFile(QStringLiteral(":/img/img/save.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionSave->setIcon(icon7);
-        actionSaveAs = new QAction(EncryptedTestEditor);
-        actionSaveAs->setObjectName(QStringLiteral("actionSaveAs"));
+        icon7.addFile(QStringLiteral(":/img/img/folder.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionOpenEncryptedText->setIcon(icon7);
+        actionSaveNormalText = new QAction(EncryptedTestEditor);
+        actionSaveNormalText->setObjectName(QStringLiteral("actionSaveNormalText"));
         QIcon icon8;
-        icon8.addFile(QStringLiteral(":/img/img/save2.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionSaveAs->setIcon(icon8);
+        icon8.addFile(QStringLiteral(":/img/img/save.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionSaveNormalText->setIcon(icon8);
+        actionSaveEncrypedText = new QAction(EncryptedTestEditor);
+        actionSaveEncrypedText->setObjectName(QStringLiteral("actionSaveEncrypedText"));
+        QIcon icon9;
+        icon9.addFile(QStringLiteral(":/img/img/save2.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionSaveEncrypedText->setIcon(icon9);
         actionExit = new QAction(EncryptedTestEditor);
         actionExit->setObjectName(QStringLiteral("actionExit"));
-        QIcon icon9;
-        icon9.addFile(QStringLiteral(":/img/img/cancel.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionExit->setIcon(icon9);
+        QIcon icon10;
+        icon10.addFile(QStringLiteral(":/img/img/cancel.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionExit->setIcon(icon10);
         actionEncryptText = new QAction(EncryptedTestEditor);
         actionEncryptText->setObjectName(QStringLiteral("actionEncryptText"));
-        QIcon icon10;
-        icon10.addFile(QStringLiteral(":/img/img/file.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionEncryptText->setIcon(icon10);
+        QIcon icon11;
+        icon11.addFile(QStringLiteral(":/img/img/file.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionEncryptText->setIcon(icon11);
         actionDecryptText_2 = new QAction(EncryptedTestEditor);
         actionDecryptText_2->setObjectName(QStringLiteral("actionDecryptText_2"));
-        QIcon icon11;
-        icon11.addFile(QStringLiteral(":/img/img/file2.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionDecryptText_2->setIcon(icon11);
+        QIcon icon12;
+        icon12.addFile(QStringLiteral(":/img/img/file2.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionDecryptText_2->setIcon(icon12);
         actionFonts = new QAction(EncryptedTestEditor);
         actionFonts->setObjectName(QStringLiteral("actionFonts"));
-        QIcon icon12;
-        icon12.addFile(QStringLiteral(":/img/img/font.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionFonts->setIcon(icon12);
+        QIcon icon13;
+        icon13.addFile(QStringLiteral(":/img/img/font.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionFonts->setIcon(icon13);
         actionFontColor = new QAction(EncryptedTestEditor);
         actionFontColor->setObjectName(QStringLiteral("actionFontColor"));
-        QIcon icon13;
-        icon13.addFile(QStringLiteral(":/img/img/color-picker.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionFontColor->setIcon(icon13);
+        QIcon icon14;
+        icon14.addFile(QStringLiteral(":/img/img/color-picker.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionFontColor->setIcon(icon14);
         actionUndo = new QAction(EncryptedTestEditor);
         actionUndo->setObjectName(QStringLiteral("actionUndo"));
-        QIcon icon14;
-        icon14.addFile(QStringLiteral(":/img/img/undo.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionUndo->setIcon(icon14);
+        QIcon icon15;
+        icon15.addFile(QStringLiteral(":/img/img/undo.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionUndo->setIcon(icon15);
         actionRedo = new QAction(EncryptedTestEditor);
         actionRedo->setObjectName(QStringLiteral("actionRedo"));
-        QIcon icon15;
-        icon15.addFile(QStringLiteral(":/img/img/redo.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionRedo->setIcon(icon15);
+        QIcon icon16;
+        icon16.addFile(QStringLiteral(":/img/img/redo.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionRedo->setIcon(icon16);
         actionAbout = new QAction(EncryptedTestEditor);
         actionAbout->setObjectName(QStringLiteral("actionAbout"));
-        actionAbout->setIcon(icon1);
+        QIcon icon17;
+        icon17.addFile(QStringLiteral(":/img/img/conversation.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionAbout->setIcon(icon17);
         centralWidget = new QWidget(EncryptedTestEditor);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -230,7 +235,7 @@ public:
 
         gridLayout_3->addLayout(verticalLayout_4, 2, 0, 1, 2);
 
-        tabWidget->addTab(tab, icon10, QString());
+        tabWidget->addTab(tab, icon11, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
         gridLayout_4 = new QGridLayout(tab_2);
@@ -280,7 +285,7 @@ public:
 
         gridLayout_4->addLayout(verticalLayout_5, 2, 0, 1, 1);
 
-        tabWidget->addTab(tab_2, icon11, QString());
+        tabWidget->addTab(tab_2, icon12, QString());
 
         gridLayout->addWidget(tabWidget, 0, 1, 1, 1);
 
@@ -306,11 +311,11 @@ public:
         menuBar->addAction(menuEdit->menuAction());
         menuBar->addAction(menuAbout->menuAction());
         menuFile->addAction(actionNew);
-        menuFile->addAction(actionOpenText);
+        menuFile->addAction(actionOpenNormalText);
         menuFile->addAction(actionOpenEncryptedText);
         menuFile->addSeparator();
-        menuFile->addAction(actionSave);
-        menuFile->addAction(actionSaveAs);
+        menuFile->addAction(actionSaveNormalText);
+        menuFile->addAction(actionSaveEncrypedText);
         menuFile->addSeparator();
         menuFile->addAction(actionExit);
         menuEdit->addAction(actionEncryptText);
@@ -327,12 +332,13 @@ public:
         menuEdit->addAction(actionRedo);
         menuEdit->addSeparator();
         menuEdit->addAction(actionClear);
+        menuAbout->addAction(actionAbout);
         mainToolBar->addAction(actionNew);
-        mainToolBar->addAction(actionOpenText);
+        mainToolBar->addAction(actionOpenNormalText);
         mainToolBar->addAction(actionOpenEncryptedText);
         mainToolBar->addSeparator();
-        mainToolBar->addAction(actionSave);
-        mainToolBar->addAction(actionSaveAs);
+        mainToolBar->addAction(actionSaveNormalText);
+        mainToolBar->addAction(actionSaveEncrypedText);
         mainToolBar->addSeparator();
         mainToolBar->addAction(actionEncryptText);
         mainToolBar->addAction(actionDecryptText_2);
@@ -351,7 +357,7 @@ public:
 
         retranslateUi(EncryptedTestEditor);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(EncryptedTestEditor);
@@ -370,29 +376,32 @@ public:
 #ifndef QT_NO_TOOLTIP
         actionCopy->setToolTip(QApplication::translate("EncryptedTestEditor", "Copy", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
+        actionCopy->setShortcut(QApplication::translate("EncryptedTestEditor", "Ctrl+Shift+C", Q_NULLPTR));
         actionPaste->setText(QApplication::translate("EncryptedTestEditor", "Paste", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         actionPaste->setToolTip(QApplication::translate("EncryptedTestEditor", "Paste", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
+        actionPaste->setShortcut(QApplication::translate("EncryptedTestEditor", "Ctrl+Shift+V", Q_NULLPTR));
         actionCut->setText(QApplication::translate("EncryptedTestEditor", "Cut", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         actionCut->setToolTip(QApplication::translate("EncryptedTestEditor", "Cut", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        actionOpenText->setText(QApplication::translate("EncryptedTestEditor", "Open Text", Q_NULLPTR));
+        actionCut->setShortcut(QApplication::translate("EncryptedTestEditor", "Ctrl+Shift+X", Q_NULLPTR));
+        actionOpenNormalText->setText(QApplication::translate("EncryptedTestEditor", "Open Normal Text", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        actionOpenText->setToolTip(QApplication::translate("EncryptedTestEditor", "Open Text", Q_NULLPTR));
+        actionOpenNormalText->setToolTip(QApplication::translate("EncryptedTestEditor", "Open Normal Text", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         actionOpenEncryptedText->setText(QApplication::translate("EncryptedTestEditor", "Open Encrypted Text", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         actionOpenEncryptedText->setToolTip(QApplication::translate("EncryptedTestEditor", "Open Encrypted Text", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        actionSave->setText(QApplication::translate("EncryptedTestEditor", "Save", Q_NULLPTR));
+        actionSaveNormalText->setText(QApplication::translate("EncryptedTestEditor", "Save Normal Text", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        actionSave->setToolTip(QApplication::translate("EncryptedTestEditor", "Save", Q_NULLPTR));
+        actionSaveNormalText->setToolTip(QApplication::translate("EncryptedTestEditor", "Save Normal Text", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        actionSaveAs->setText(QApplication::translate("EncryptedTestEditor", "SaveAs", Q_NULLPTR));
+        actionSaveEncrypedText->setText(QApplication::translate("EncryptedTestEditor", "Save Encryped Text", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        actionSaveAs->setToolTip(QApplication::translate("EncryptedTestEditor", "SaveAs", Q_NULLPTR));
+        actionSaveEncrypedText->setToolTip(QApplication::translate("EncryptedTestEditor", "Save Encryped Text", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         actionExit->setText(QApplication::translate("EncryptedTestEditor", "Exit", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
@@ -418,10 +427,12 @@ public:
 #ifndef QT_NO_TOOLTIP
         actionUndo->setToolTip(QApplication::translate("EncryptedTestEditor", "Undo", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
+        actionUndo->setShortcut(QApplication::translate("EncryptedTestEditor", "Ctrl+Alt+Z", Q_NULLPTR));
         actionRedo->setText(QApplication::translate("EncryptedTestEditor", "Redo", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         actionRedo->setToolTip(QApplication::translate("EncryptedTestEditor", "Redo", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
+        actionRedo->setShortcut(QApplication::translate("EncryptedTestEditor", "Ctrl+Shift+Z", Q_NULLPTR));
         actionAbout->setText(QApplication::translate("EncryptedTestEditor", "About", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         actionAbout->setToolTip(QApplication::translate("EncryptedTestEditor", "About", Q_NULLPTR));

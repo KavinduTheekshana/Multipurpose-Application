@@ -13,12 +13,16 @@
   <property name="windowTitle">
    <string>Encrypted Text Editor</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img/img/hacking_2ux_icon.ico</normaloff>:/img/img/hacking_2ux_icon.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="icon">
@@ -197,11 +201,11 @@
      <string>File</string>
     </property>
     <addaction name="actionNew"/>
-    <addaction name="actionOpenText"/>
+    <addaction name="actionOpenNormalText"/>
     <addaction name="actionOpenEncryptedText"/>
     <addaction name="separator"/>
-    <addaction name="actionSave"/>
-    <addaction name="actionSaveAs"/>
+    <addaction name="actionSaveNormalText"/>
+    <addaction name="actionSaveEncrypedText"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
@@ -228,6 +232,7 @@
     <property name="title">
      <string>About</string>
     </property>
+    <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -241,11 +246,11 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionNew"/>
-   <addaction name="actionOpenText"/>
+   <addaction name="actionOpenNormalText"/>
    <addaction name="actionOpenEncryptedText"/>
    <addaction name="separator"/>
-   <addaction name="actionSave"/>
-   <addaction name="actionSaveAs"/>
+   <addaction name="actionSaveNormalText"/>
+   <addaction name="actionSaveEncrypedText"/>
    <addaction name="separator"/>
    <addaction name="actionEncryptText"/>
    <addaction name="actionDecryptText_2"/>
@@ -298,6 +303,9 @@
    <property name="toolTip">
     <string>Copy</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
   </action>
   <action name="actionPaste">
    <property name="icon">
@@ -309,6 +317,9 @@
    </property>
    <property name="toolTip">
     <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+V</string>
    </property>
   </action>
   <action name="actionCut">
@@ -322,17 +333,20 @@
    <property name="toolTip">
     <string>Cut</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+X</string>
+   </property>
   </action>
-  <action name="actionOpenText">
+  <action name="actionOpenNormalText">
    <property name="icon">
     <iconset resource="resource.qrc">
      <normaloff>:/img/img/foldertext.png</normaloff>:/img/img/foldertext.png</iconset>
    </property>
    <property name="text">
-    <string>Open Text</string>
+    <string>Open Normal Text</string>
    </property>
    <property name="toolTip">
-    <string>Open Text</string>
+    <string>Open Normal Text</string>
    </property>
   </action>
   <action name="actionOpenEncryptedText">
@@ -347,28 +361,28 @@
     <string>Open Encrypted Text</string>
    </property>
   </action>
-  <action name="actionSave">
+  <action name="actionSaveNormalText">
    <property name="icon">
     <iconset resource="resource.qrc">
      <normaloff>:/img/img/save.png</normaloff>:/img/img/save.png</iconset>
    </property>
    <property name="text">
-    <string>Save</string>
+    <string>Save Normal Text</string>
    </property>
    <property name="toolTip">
-    <string>Save</string>
+    <string>Save Normal Text</string>
    </property>
   </action>
-  <action name="actionSaveAs">
+  <action name="actionSaveEncrypedText">
    <property name="icon">
     <iconset resource="resource.qrc">
      <normaloff>:/img/img/save2.png</normaloff>:/img/img/save2.png</iconset>
    </property>
    <property name="text">
-    <string>SaveAs</string>
+    <string>Save Encryped Text</string>
    </property>
    <property name="toolTip">
-    <string>SaveAs</string>
+    <string>Save Encryped Text</string>
    </property>
   </action>
   <action name="actionExit">
@@ -442,6 +456,9 @@
    <property name="toolTip">
     <string>Undo</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+Z</string>
+   </property>
   </action>
   <action name="actionRedo">
    <property name="icon">
@@ -454,11 +471,14 @@
    <property name="toolTip">
     <string>Redo</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
   </action>
   <action name="actionAbout">
    <property name="icon">
     <iconset resource="resource.qrc">
-     <normaloff>:/img/img/broom.png</normaloff>:/img/img/broom.png</iconset>
+     <normaloff>:/img/img/conversation.png</normaloff>:/img/img/conversation.png</iconset>
    </property>
    <property name="text">
     <string>About</string>
