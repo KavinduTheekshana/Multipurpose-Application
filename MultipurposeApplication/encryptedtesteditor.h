@@ -62,6 +62,10 @@ private slots:
 
     void on_actionPaste_triggered();
 
+    void on_actionPrintNormalText_triggered();
+
+    void on_actionPrintEncrypedText_2_triggered();
+
 private:
     Ui::EncryptedTestEditor *ui;
     QString file_path;

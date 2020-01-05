@@ -10,6 +10,7 @@ Calculator::Calculator(QWidget *parent) :
     ui(new Ui::Calculator)
 {
     ui->setupUi(this);
+    this->setFixedSize(398,610);
 
 
     connect(ui->pushButton_0,SIGNAL(released()),this,SLOT(digit_passed()));

@@ -6,6 +6,8 @@
 #include <QFont>
 #include <QColorDialog>
 #include <QColor>
+#include <QPrinter>
+#include <QPrintDialog>
 
 EncryptedTestEditor::EncryptedTestEditor(QWidget *parent) :
     QMainWindow(parent),
@@ -336,5 +338,60 @@ void EncryptedTestEditor::on_actionPaste_triggered()
     }else if (ui->tabWidget->currentIndex()==1) {
         ui->txtDecTextInput->selectAll();
         ui->txtDecTextInput->paste();
+    }
+}
+
+
+
+void EncryptedTestEditor::on_actionPrintNormalText_triggered()
+{
+    if(ui->tabWidget->currentIndex()==0){
+        if(ui->txtEncTextInput->toPlainText()==""){
+            QMessageBox::warning(this," Input Error","Please Fill The Normal Text Input Box");
+        }else {
+            QPrinter printer;
+            printer.setPrinterName("Desierd Printer Name");
+            QPrintDialog dialog(&printer,this);
+            if(dialog.exec()==QDialog::Rejected) return;
+            ui->txtEncTextInput->print(&printer);
+        }
+
+    }else if (ui->tabWidget->currentIndex()==1) {
+        if(ui->txtDecTextOutput->toPlainText()==""){
+            QMessageBox::warning(this," Input Error","Please Decrypt Your text First");
+        }else {
+            QPrinter printer;
+            printer.setPrinterName("Desierd Printer Name");
+            QPrintDialog dialog(&printer,this);
+            if(dialog.exec()==QDialog::Rejected) return;
+            ui->txtDecTextOutput->print(&printer);
+        }
+    }
+
+}
+
+void EncryptedTestEditor::on_actionPrintEncrypedText_2_triggered()
+{
+    if(ui->tabWidget->currentIndex()==0){
+        if(ui->txtEncTextOutput->toPlainText()==""){
+            QMessageBox::warning(this," Input Error","Please Encrypt Your text First");
+        }else {
+            QPrinter printer;
+            printer.setPrinterName("Desierd Printer Name");
+            QPrintDialog dialog(&printer,this);
+            if(dialog.exec()==QDialog::Rejected) return;
+            ui->txtEncTextOutput->print(&printer);
+        }
+
+    }else if (ui->tabWidget->currentIndex()==1) {
+        if(ui->txtDecTextInput->toPlainText()==""){
+            QMessageBox::warning(this," Input Error","Please Fill The Encrypted Text Input Box");
+        }else {
+            QPrinter printer;
+            printer.setPrinterName("Desierd Printer Name");
+            QPrintDialog dialog(&printer,this);
+            if(dialog.exec()==QDialog::Rejected) return;
+            ui->txtDecTextInput->print(&printer);
+        }
     }
 }

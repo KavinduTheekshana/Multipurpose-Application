@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Calculator</string>
+     <string>Web Browser</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">

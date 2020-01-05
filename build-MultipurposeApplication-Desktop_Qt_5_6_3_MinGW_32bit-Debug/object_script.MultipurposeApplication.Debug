@@ -1,0 +1,13 @@
+INPUT(
+./debug/main.o
+./debug/mainwindow.o
+./debug/calculator.o
+./debug/encryptedtesteditor.o
+./debug/simplecrypt.o
+./debug/webbrowser.o
+./debug/qrc_resource.o
+./debug/moc_mainwindow.o
+./debug/moc_calculator.o
+./debug/moc_encryptedtesteditor.o
+./debug/moc_webbrowser.o
+);

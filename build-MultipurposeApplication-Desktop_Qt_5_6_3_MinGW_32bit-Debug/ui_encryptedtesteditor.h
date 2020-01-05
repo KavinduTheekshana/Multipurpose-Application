@@ -50,6 +50,8 @@ public:
     QAction *actionUndo;
     QAction *actionRedo;
     QAction *actionAbout;
+    QAction *actionPrintNormalText;
+    QAction *actionPrintEncrypedText_2;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QTabWidget *tabWidget;
@@ -171,6 +173,16 @@ public:
         QIcon icon17;
         icon17.addFile(QStringLiteral(":/img/img/conversation.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionAbout->setIcon(icon17);
+        actionPrintNormalText = new QAction(EncryptedTestEditor);
+        actionPrintNormalText->setObjectName(QStringLiteral("actionPrintNormalText"));
+        QIcon icon18;
+        icon18.addFile(QStringLiteral(":/img/img/printer.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionPrintNormalText->setIcon(icon18);
+        actionPrintEncrypedText_2 = new QAction(EncryptedTestEditor);
+        actionPrintEncrypedText_2->setObjectName(QStringLiteral("actionPrintEncrypedText_2"));
+        QIcon icon19;
+        icon19.addFile(QStringLiteral(":/img/img/printernew.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionPrintEncrypedText_2->setIcon(icon19);
         centralWidget = new QWidget(EncryptedTestEditor);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -317,6 +329,9 @@ public:
         menuFile->addAction(actionSaveNormalText);
         menuFile->addAction(actionSaveEncrypedText);
         menuFile->addSeparator();
+        menuFile->addAction(actionPrintNormalText);
+        menuFile->addAction(actionPrintEncrypedText_2);
+        menuFile->addSeparator();
         menuFile->addAction(actionExit);
         menuEdit->addAction(actionEncryptText);
         menuEdit->addAction(actionDecryptText_2);
@@ -352,6 +367,9 @@ public:
         mainToolBar->addSeparator();
         mainToolBar->addAction(actionUndo);
         mainToolBar->addAction(actionRedo);
+        mainToolBar->addSeparator();
+        mainToolBar->addAction(actionPrintNormalText);
+        mainToolBar->addAction(actionPrintEncrypedText_2);
         mainToolBar->addSeparator();
         mainToolBar->addAction(actionClear);
 
@@ -437,6 +455,16 @@ public:
 #ifndef QT_NO_TOOLTIP
         actionAbout->setToolTip(QApplication::translate("EncryptedTestEditor", "About", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
+        actionPrintNormalText->setText(QApplication::translate("EncryptedTestEditor", "Print Normal Text", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        actionPrintNormalText->setToolTip(QApplication::translate("EncryptedTestEditor", "Print Normal Text", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        actionPrintNormalText->setShortcut(QApplication::translate("EncryptedTestEditor", "Ctrl+P", Q_NULLPTR));
+        actionPrintEncrypedText_2->setText(QApplication::translate("EncryptedTestEditor", "Print Encryped Text", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        actionPrintEncrypedText_2->setToolTip(QApplication::translate("EncryptedTestEditor", "Print Encryped Text", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        actionPrintEncrypedText_2->setShortcut(QApplication::translate("EncryptedTestEditor", "Ctrl+Shift+P", Q_NULLPTR));
         txtEncTextInput->setPlaceholderText(QApplication::translate("EncryptedTestEditor", "Enter Yout Text Here", Q_NULLPTR));
         txtEncKey->setPlaceholderText(QApplication::translate("EncryptedTestEditor", "Enter Key Value In Here", Q_NULLPTR));
         btnEncript->setText(QApplication::translate("EncryptedTestEditor", "Encrypt", Q_NULLPTR));

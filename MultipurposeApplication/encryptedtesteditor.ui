@@ -207,6 +207,9 @@
     <addaction name="actionSaveNormalText"/>
     <addaction name="actionSaveEncrypedText"/>
     <addaction name="separator"/>
+    <addaction name="actionPrintNormalText"/>
+    <addaction name="actionPrintEncrypedText_2"/>
+    <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
@@ -264,6 +267,9 @@
    <addaction name="separator"/>
    <addaction name="actionUndo"/>
    <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="actionPrintNormalText"/>
+   <addaction name="actionPrintEncrypedText_2"/>
    <addaction name="separator"/>
    <addaction name="actionClear"/>
   </widget>
@@ -485,6 +491,36 @@
    </property>
    <property name="toolTip">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionPrintNormalText">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/printer.png</normaloff>:/img/img/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print Normal Text</string>
+   </property>
+   <property name="toolTip">
+    <string>Print Normal Text</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionPrintEncrypedText_2">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/printernew.png</normaloff>:/img/img/printernew.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print Encryped Text</string>
+   </property>
+   <property name="toolTip">
+    <string>Print Encryped Text</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
    </property>
   </action>
  </widget>

@@ -60,7 +60,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         btnCalculator->setText(QApplication::translate("MainWindow", "Calculator", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindow", "Encrypted Text Editor", Q_NULLPTR));
-        pushButton_3->setText(QApplication::translate("MainWindow", "Calculator", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Web Browser", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("MainWindow", "Calculator", Q_NULLPTR));
     } // retranslateUi
 

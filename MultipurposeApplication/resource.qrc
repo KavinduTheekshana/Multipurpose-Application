@@ -19,5 +19,7 @@
         <file>img/conversation.png</file>
         <file>img/hacking_2ux_icon.ico</file>
         <file>img/calculating_FUo_icon.ico</file>
+        <file>img/printer.png</file>
+        <file>img/printernew.png</file>
     </qresource>
 </RCC>

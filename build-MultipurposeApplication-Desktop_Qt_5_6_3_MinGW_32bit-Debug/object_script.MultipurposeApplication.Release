@@ -1,0 +1,13 @@
+INPUT(
+./release/main.o
+./release/mainwindow.o
+./release/calculator.o
+./release/encryptedtesteditor.o
+./release/simplecrypt.o
+./release/webbrowser.o
+./release/qrc_resource.o
+./release/moc_mainwindow.o
+./release/moc_calculator.o
+./release/moc_encryptedtesteditor.o
+./release/moc_webbrowser.o
+);
