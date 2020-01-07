@@ -5,9 +5,11 @@ INPUT(
 ./release/encryptedtesteditor.o
 ./release/simplecrypt.o
 ./release/webbrowser.o
+./release/musicplayer.o
 ./release/qrc_resource.o
 ./release/moc_mainwindow.o
 ./release/moc_calculator.o
 ./release/moc_encryptedtesteditor.o
 ./release/moc_webbrowser.o
+./release/moc_musicplayer.o
 );

@@ -21,5 +21,11 @@
         <file>img/calculating_FUo_icon.ico</file>
         <file>img/printer.png</file>
         <file>img/printernew.png</file>
+        <file>img/Player/folder.png</file>
+        <file>img/Player/pause.png</file>
+        <file>img/Player/play-button.png</file>
+        <file>img/Player/stop.png</file>
+        <file>img/Player/music_0wh_icon.ico</file>
+        <file>img/software_3k5_icon.ico</file>
     </qresource>
 </RCC>

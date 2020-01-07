@@ -24,21 +24,22 @@ QT_BEGIN_NAMESPACE
 class Ui_WebBrowser
 {
 public:
-    QMenuBar *menubar;
     QWidget *centralwidget;
+    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *WebBrowser)
     {
         if (WebBrowser->objectName().isEmpty())
             WebBrowser->setObjectName(QStringLiteral("WebBrowser"));
-        WebBrowser->resize(800, 600);
-        menubar = new QMenuBar(WebBrowser);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        WebBrowser->setMenuBar(menubar);
+        WebBrowser->resize(761, 429);
         centralwidget = new QWidget(WebBrowser);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         WebBrowser->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(WebBrowser);
+        menubar->setObjectName(QStringLiteral("menubar"));
+        menubar->setGeometry(QRect(0, 0, 761, 21));
+        WebBrowser->setMenuBar(menubar);
         statusbar = new QStatusBar(WebBrowser);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         WebBrowser->setStatusBar(statusbar);

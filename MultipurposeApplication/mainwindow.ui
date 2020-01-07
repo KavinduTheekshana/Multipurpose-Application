@@ -6,22 +6,39 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>784</width>
-    <height>501</height>
+    <width>537</width>
+    <height>437</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Multi Purpose Application</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img/img/software_3k5_icon.ico</normaloff>:/img/img/software_3k5_icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="btnCalculator">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>90</y>
+      <x>10</x>
+      <y>170</y>
       <width>251</width>
       <height>121</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: rgb(255, 151, 57);
+  color: white; 
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
     </property>
     <property name="text">
      <string>Calculator</string>
@@ -30,11 +47,26 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>90</y>
+      <x>270</x>
+      <y>170</y>
       <width>251</width>
       <height>121</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: #5cb85c;
+  color: white; 
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #428c42, stop: 1 #12e312);
+}
+
+</string>
     </property>
     <property name="text">
      <string>Encrypted Text Editor</string>
@@ -43,11 +75,26 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>240</y>
+      <x>270</x>
+      <y>300</y>
       <width>251</width>
       <height>121</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: #d9534f;
+  color: white; 
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #bd1f1a, stop: 1 #f50800);
+}
+
+</string>
     </property>
     <property name="text">
      <string>Web Browser</string>
@@ -56,19 +103,83 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>230</y>
+      <x>10</x>
+      <y>300</y>
       <width>251</width>
       <height>121</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: #337ab7;
+  color: white; 
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #29689e, stop: 1 #0084f5);
+}
+
+</string>
+    </property>
     <property name="text">
-     <string>Calculator</string>
+     <string>Audio Player</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DigitalClock">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>511</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nexa Bold</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #181f1b;</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>19</y>
+      <width>511</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat ExtraBold</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Multi Purpose Application</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

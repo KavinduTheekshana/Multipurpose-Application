@@ -4,8 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui printsupport
-QT  += webkitwidgets
+QT       += core gui printsupport multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,19 +17,23 @@ SOURCES += main.cpp\
     calculator.cpp \
     encryptedtesteditor.cpp \
     simplecrypt.cpp \
-    webbrowser.cpp
+    webbrowser.cpp \
+    musicplayer.cpp
+
 
 
 HEADERS  += mainwindow.h \
     calculator.h \
     encryptedtesteditor.h \
     simplecrypt.h \
-    webbrowser.h
+    webbrowser.h \
+    musicplayer.h
 
 FORMS    += mainwindow.ui \
     calculator.ui \
     encryptedtesteditor.ui \
-    webbrowser.ui
+    webbrowser.ui \
+    musicplayer.ui
 
 RESOURCES += \
     resource.qrc
