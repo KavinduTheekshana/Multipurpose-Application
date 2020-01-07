@@ -13,13 +13,13 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,112 +27,129 @@ QT_BEGIN_NAMESPACE
 class Ui_MusicPlayer
 {
 public:
-    QWidget *centralwidget;
-    QVBoxLayout *verticalLayout_4;
-    QVBoxLayout *verticalLayout_2;
-    QLabel *label;
-    QHBoxLayout *horizontalLayout_3;
-    QSlider *horizontalSlider_2;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *btnOpen;
-    QPushButton *btnPlay;
-    QPushButton *btnPause;
-    QPushButton *btnStop;
-    QVBoxLayout *verticalLayout;
-    QSlider *horizontalSlider;
+    QWidget *centralWidget;
+    QSlider *seekBar;
+    QPushButton *back;
+    QPushButton *play;
+    QPushButton *forward;
+    QPushButton *add;
+    QPushButton *remove;
+    QLabel *currentSong;
+    QListWidget *listWidget;
+    QPushButton *repeat;
+    QPushButton *shuffle;
+    QSlider *volumeBar;
+    QPushButton *mute;
+    QLineEdit *searchBar;
 
     void setupUi(QMainWindow *MusicPlayer)
     {
         if (MusicPlayer->objectName().isEmpty())
             MusicPlayer->setObjectName(QStringLiteral("MusicPlayer"));
-        MusicPlayer->resize(768, 147);
-        QIcon icon;
-        icon.addFile(QStringLiteral(":/img/img/Player/music_0wh_icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        MusicPlayer->setWindowIcon(icon);
-        MusicPlayer->setStyleSheet(QStringLiteral(""));
-        centralwidget = new QWidget(MusicPlayer);
-        centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        verticalLayout_4 = new QVBoxLayout(centralwidget);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QStringLiteral("label"));
-        QFont font;
-        font.setFamily(QStringLiteral("Montserrat Medium"));
-        font.setPointSize(10);
-        label->setFont(font);
-        label->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-
-        verticalLayout_2->addWidget(label);
-
-
-        verticalLayout_4->addLayout(verticalLayout_2);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        horizontalSlider_2 = new QSlider(centralwidget);
-        horizontalSlider_2->setObjectName(QStringLiteral("horizontalSlider_2"));
-        horizontalSlider_2->setOrientation(Qt::Horizontal);
-
-        horizontalLayout_3->addWidget(horizontalSlider_2);
-
-
-        verticalLayout_4->addLayout(horizontalLayout_3);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        btnOpen = new QPushButton(centralwidget);
-        btnOpen->setObjectName(QStringLiteral("btnOpen"));
-        btnOpen->setStyleSheet(QStringLiteral(""));
-        QIcon icon1;
-        icon1.addFile(QStringLiteral(":/img/img/Player/folder.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btnOpen->setIcon(icon1);
-
-        horizontalLayout->addWidget(btnOpen);
-
-        btnPlay = new QPushButton(centralwidget);
-        btnPlay->setObjectName(QStringLiteral("btnPlay"));
-        QIcon icon2;
-        icon2.addFile(QStringLiteral(":/img/img/Player/play-button.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btnPlay->setIcon(icon2);
-
-        horizontalLayout->addWidget(btnPlay);
-
-        btnPause = new QPushButton(centralwidget);
-        btnPause->setObjectName(QStringLiteral("btnPause"));
-        QIcon icon3;
-        icon3.addFile(QStringLiteral(":/img/img/Player/pause.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btnPause->setIcon(icon3);
-
-        horizontalLayout->addWidget(btnPause);
-
-        btnStop = new QPushButton(centralwidget);
-        btnStop->setObjectName(QStringLiteral("btnStop"));
-        QIcon icon4;
-        icon4.addFile(QStringLiteral(":/img/img/Player/stop.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btnStop->setIcon(icon4);
-
-        horizontalLayout->addWidget(btnStop);
-
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        horizontalSlider = new QSlider(centralwidget);
-        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
-        horizontalSlider->setValue(99);
-        horizontalSlider->setOrientation(Qt::Horizontal);
-
-        verticalLayout->addWidget(horizontalSlider);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
-
-        verticalLayout_4->addLayout(horizontalLayout);
-
-        MusicPlayer->setCentralWidget(centralwidget);
+        MusicPlayer->resize(956, 554);
+        MusicPlayer->setStyleSheet(QStringLiteral("background-color:#2a3e52;"));
+        centralWidget = new QWidget(MusicPlayer);
+        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(centralWidget->sizePolicy().hasHeightForWidth());
+        centralWidget->setSizePolicy(sizePolicy);
+        seekBar = new QSlider(centralWidget);
+        seekBar->setObjectName(QStringLiteral("seekBar"));
+        seekBar->setGeometry(QRect(8, 475, 921, 20));
+        seekBar->setMouseTracking(true);
+        seekBar->setFocusPolicy(Qt::NoFocus);
+        seekBar->setAcceptDrops(false);
+        seekBar->setMaximum(1000);
+        seekBar->setOrientation(Qt::Horizontal);
+        back = new QPushButton(centralWidget);
+        back->setObjectName(QStringLiteral("back"));
+        back->setGeometry(QRect(398, 495, 41, 31));
+        back->setFocusPolicy(Qt::NoFocus);
+        play = new QPushButton(centralWidget);
+        play->setObjectName(QStringLiteral("play"));
+        play->setGeometry(QRect(448, 495, 41, 31));
+        play->setFocusPolicy(Qt::NoFocus);
+        play->setCheckable(true);
+        play->setChecked(true);
+        forward = new QPushButton(centralWidget);
+        forward->setObjectName(QStringLiteral("forward"));
+        forward->setGeometry(QRect(497, 495, 41, 31));
+        forward->setFocusPolicy(Qt::NoFocus);
+        add = new QPushButton(centralWidget);
+        add->setObjectName(QStringLiteral("add"));
+        add->setGeometry(QRect(840, 500, 41, 21));
+        add->setFocusPolicy(Qt::NoFocus);
+        remove = new QPushButton(centralWidget);
+        remove->setObjectName(QStringLiteral("remove"));
+        remove->setGeometry(QRect(770, 500, 41, 21));
+        remove->setFocusPolicy(Qt::NoFocus);
+        currentSong = new QLabel(centralWidget);
+        currentSong->setObjectName(QStringLiteral("currentSong"));
+        currentSong->setGeometry(QRect(148, 460, 641, 20));
+        currentSong->setAlignment(Qt::AlignCenter);
+        listWidget = new QListWidget(centralWidget);
+        listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setGeometry(QRect(8, 50, 921, 401));
+        listWidget->setFocusPolicy(Qt::NoFocus);
+        listWidget->setContextMenuPolicy(Qt::NoContextMenu);
+        listWidget->setStyleSheet(QLatin1String("color:white;\n"
+"\n"
+"QListWidget::item:selected\n"
+"{\n"
+"    background: #ffd000;\n"
+"}\n"
+"\n"
+"QListWidget::item:hover\n"
+"{\n"
+"    background: #ffd000;\n"
+"}"));
+        listWidget->setEditTriggers(QAbstractItemView::DoubleClicked);
+        listWidget->setProperty("showDropIndicator", QVariant(false));
+        listWidget->setMovement(QListView::Static);
+        listWidget->setViewMode(QListView::ListMode);
+        repeat = new QPushButton(centralWidget);
+        repeat->setObjectName(QStringLiteral("repeat"));
+        repeat->setGeometry(QRect(570, 500, 41, 21));
+        repeat->setFocusPolicy(Qt::NoFocus);
+        repeat->setCheckable(true);
+        shuffle = new QPushButton(centralWidget);
+        shuffle->setObjectName(QStringLiteral("shuffle"));
+        shuffle->setGeometry(QRect(325, 500, 41, 21));
+        shuffle->setFocusPolicy(Qt::NoFocus);
+        shuffle->setCheckable(true);
+        volumeBar = new QSlider(centralWidget);
+        volumeBar->setObjectName(QStringLiteral("volumeBar"));
+        volumeBar->setGeometry(QRect(110, 503, 181, 16));
+        volumeBar->setFocusPolicy(Qt::NoFocus);
+        volumeBar->setMaximum(100);
+        volumeBar->setValue(100);
+        volumeBar->setOrientation(Qt::Horizontal);
+        volumeBar->setInvertedAppearance(false);
+        volumeBar->setInvertedControls(false);
+        mute = new QPushButton(centralWidget);
+        mute->setObjectName(QStringLiteral("mute"));
+        mute->setGeometry(QRect(50, 500, 41, 21));
+        mute->setFocusPolicy(Qt::NoFocus);
+        mute->setCheckable(true);
+        mute->setChecked(false);
+        mute->setAutoRepeat(false);
+        mute->setFlat(false);
+        searchBar = new QLineEdit(centralWidget);
+        searchBar->setObjectName(QStringLiteral("searchBar"));
+        searchBar->setGeometry(QRect(8, 10, 921, 28));
+        searchBar->setCursor(QCursor(Qt::ArrowCursor));
+        searchBar->setMouseTracking(false);
+        searchBar->setStyleSheet(QStringLiteral("color:white;"));
+        searchBar->setCursorPosition(0);
+        searchBar->setReadOnly(false);
+        MusicPlayer->setCentralWidget(centralWidget);
 
         retranslateUi(MusicPlayer);
+
+        listWidget->setCurrentRow(-1);
+
 
         QMetaObject::connectSlotsByName(MusicPlayer);
     } // setupUi
@@ -140,11 +157,15 @@ public:
     void retranslateUi(QMainWindow *MusicPlayer)
     {
         MusicPlayer->setWindowTitle(QApplication::translate("MusicPlayer", "Music Player", Q_NULLPTR));
-        label->setText(QApplication::translate("MusicPlayer", "TextLabel", Q_NULLPTR));
-        btnOpen->setText(QApplication::translate("MusicPlayer", "Open", Q_NULLPTR));
-        btnPlay->setText(QApplication::translate("MusicPlayer", "Play", Q_NULLPTR));
-        btnPause->setText(QApplication::translate("MusicPlayer", "Paush", Q_NULLPTR));
-        btnStop->setText(QApplication::translate("MusicPlayer", "Stop", Q_NULLPTR));
+        back->setText(QApplication::translate("MusicPlayer", "<", Q_NULLPTR));
+        play->setText(QApplication::translate("MusicPlayer", "O", Q_NULLPTR));
+        forward->setText(QApplication::translate("MusicPlayer", ">", Q_NULLPTR));
+        add->setText(QApplication::translate("MusicPlayer", "+", Q_NULLPTR));
+        remove->setText(QApplication::translate("MusicPlayer", "-", Q_NULLPTR));
+        currentSong->setText(QApplication::translate("MusicPlayer", "Song", Q_NULLPTR));
+        repeat->setText(QApplication::translate("MusicPlayer", "r", Q_NULLPTR));
+        shuffle->setText(QApplication::translate("MusicPlayer", "s", Q_NULLPTR));
+        mute->setText(QApplication::translate("MusicPlayer", "m", Q_NULLPTR));
     } // retranslateUi
 
 };

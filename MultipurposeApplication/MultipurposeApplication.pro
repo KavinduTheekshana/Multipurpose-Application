@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui printsupport multimedia multimediawidgets
+CONFIG   += c++14
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,7 +19,9 @@ SOURCES += main.cpp\
     encryptedtesteditor.cpp \
     simplecrypt.cpp \
     webbrowser.cpp \
-    musicplayer.cpp
+    musicplayer.cpp \
+    playlist.cpp \
+    track.cpp
 
 
 
@@ -27,7 +30,10 @@ HEADERS  += mainwindow.h \
     encryptedtesteditor.h \
     simplecrypt.h \
     webbrowser.h \
-    musicplayer.h
+    musicplayer.h \
+    playlist.h \
+    track.h \
+    utils.h
 
 FORMS    += mainwindow.ui \
     calculator.ui \

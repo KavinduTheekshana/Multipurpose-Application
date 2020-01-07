@@ -6,6 +6,8 @@ INPUT(
 ./debug/simplecrypt.o
 ./debug/webbrowser.o
 ./debug/musicplayer.o
+./debug/playlist.o
+./debug/track.o
 ./debug/qrc_resource.o
 ./debug/moc_mainwindow.o
 ./debug/moc_calculator.o
