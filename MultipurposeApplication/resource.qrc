@@ -27,5 +27,11 @@
         <file>img/Player/stop.png</file>
         <file>img/Player/music_0wh_icon.ico</file>
         <file>img/software_3k5_icon.ico</file>
+        <file>img/Player/left-arrow.png</file>
+        <file>img/Player/right-arrow.png</file>
+        <file>img/Player/mute.png</file>
+        <file>img/Player/remove.png</file>
+        <file>img/Player/repeat.png</file>
+        <file>img/Player/shuffle-arrows.png</file>
     </qresource>
 </RCC>

@@ -60,6 +60,8 @@ private slots:
     void on_searchBar_textChanged(const QString &arg1);
 
 
+    void on_play_3_clicked();
+
 private:
     void updateList();
 

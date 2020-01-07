@@ -40,7 +40,7 @@ MusicPlayer::~MusicPlayer()
 
 void MusicPlayer::on_add_clicked()
 {   bool startUpdater = false;if(ui->listWidget->count() == 0) startUpdater = true;
-    QStringList files = QFileDialog::getOpenFileNames(this, tr("Select Music Files"));
+    QStringList files = QFileDialog::getOpenFileNames(this,"Open a File","","Audio File (*.mp3)");
     if(!files.empty())
     {
         playlist.add(files);
@@ -280,17 +280,6 @@ void MusicPlayer::on_searchBar_textChanged(const QString &arg1)
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
