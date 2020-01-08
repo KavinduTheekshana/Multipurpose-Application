@@ -4,14 +4,14 @@ INPUT(
 ./release/calculator.o
 ./release/encryptedtesteditor.o
 ./release/simplecrypt.o
-./release/webbrowser.o
 ./release/musicplayer.o
 ./release/playlist.o
 ./release/track.o
+./release/convertor.o
 ./release/qrc_resource.o
 ./release/moc_mainwindow.o
 ./release/moc_calculator.o
 ./release/moc_encryptedtesteditor.o
-./release/moc_webbrowser.o
 ./release/moc_musicplayer.o
+./release/moc_convertor.o
 );

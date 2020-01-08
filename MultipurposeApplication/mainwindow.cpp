@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "calculator.h"
 #include "encryptedtesteditor.h"
-#include "webbrowser.h"
+#include "convertor.h"
 #include "musicplayer.h"
 #include "ui_mainwindow.h"
 
@@ -45,8 +45,8 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    WebBrowser *webBrowser = new WebBrowser();
-    webBrowser->show();
+    Convertor *convertor = new Convertor();
+    convertor->show();
 }
 
 void MainWindow::on_pushButton_4_clicked()

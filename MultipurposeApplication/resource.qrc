@@ -33,5 +33,6 @@
         <file>img/Player/remove.png</file>
         <file>img/Player/repeat.png</file>
         <file>img/Player/shuffle-arrows.png</file>
+        <file>img/binary_code_dzZ_icon.ico</file>
     </qresource>
 </RCC>
