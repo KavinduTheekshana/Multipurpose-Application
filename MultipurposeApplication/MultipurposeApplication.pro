@@ -18,10 +18,10 @@ SOURCES += main.cpp\
     calculator.cpp \
     encryptedtesteditor.cpp \
     simplecrypt.cpp \
-    musicplayer.cpp \
     playlist.cpp \
     track.cpp \
-    convertor.cpp
+    convertor.cpp \
+    audioplayer.cpp
 
 
 
@@ -29,17 +29,17 @@ HEADERS  += mainwindow.h \
     calculator.h \
     encryptedtesteditor.h \
     simplecrypt.h \
-    musicplayer.h \
     playlist.h \
     track.h \
     utils.h \
-    convertor.h
+    convertor.h \
+    audioplayer.h
 
 FORMS    += mainwindow.ui \
     calculator.ui \
     encryptedtesteditor.ui \
-    musicplayer.ui \
-    convertor.ui
+    convertor.ui \
+    audioplayer.ui
 
 RESOURCES += \
     resource.qrc

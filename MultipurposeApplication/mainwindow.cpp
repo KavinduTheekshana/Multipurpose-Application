@@ -2,7 +2,7 @@
 #include "calculator.h"
 #include "encryptedtesteditor.h"
 #include "convertor.h"
-#include "musicplayer.h"
+#include "audioplayer.h"
 #include "ui_mainwindow.h"
 
 #include <QTimer>
@@ -51,6 +51,6 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    MusicPlayer *musicPlayer = new MusicPlayer();
+    AudioPlayer *musicPlayer = new AudioPlayer();
     musicPlayer->show();
 }
