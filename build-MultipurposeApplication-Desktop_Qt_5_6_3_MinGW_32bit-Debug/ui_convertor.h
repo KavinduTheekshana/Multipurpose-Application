@@ -37,7 +37,7 @@ public:
     {
         if (Convertor->objectName().isEmpty())
             Convertor->setObjectName(QStringLiteral("Convertor"));
-        Convertor->resize(435, 232);
+        Convertor->resize(468, 255);
         QFont font;
         font.setPointSize(8);
         Convertor->setFont(font);

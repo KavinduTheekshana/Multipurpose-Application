@@ -1,9 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>AudioPlayer</class>
- <widget name="AudioPlayer" class="QMainWindow">
+ <widget class="QMainWindow" name="AudioPlayer">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Music Player</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resource.qrc">

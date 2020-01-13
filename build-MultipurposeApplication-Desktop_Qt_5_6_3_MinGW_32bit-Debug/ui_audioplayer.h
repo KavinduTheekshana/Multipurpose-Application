@@ -624,7 +624,7 @@ public:
 
     void retranslateUi(QMainWindow *AudioPlayer)
     {
-        AudioPlayer->setWindowTitle(QApplication::translate("AudioPlayer", "MainWindow", Q_NULLPTR));
+        AudioPlayer->setWindowTitle(QApplication::translate("AudioPlayer", "Music Player", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         back->setToolTip(QApplication::translate("AudioPlayer", "backword", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP

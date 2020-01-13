@@ -7,7 +7,7 @@ Convertor::Convertor(QWidget *parent) :
     ui(new Ui::Convertor)
 {
     ui->setupUi(this);
-    this->setFixedSize(435,232);
+    this->setFixedSize(468,255);
 
 
 }
